@@ -1,10 +1,9 @@
-# JSON.canParse
+# JSON.tryParse
 
 ## Problem to solve
 
 ```js
-try { JSON.parse(str) } catch { return false }
-return true
+try { return JSON.parse(str) } catch { return null }
 ```
 
 ## Prior art
@@ -14,8 +13,9 @@ return true
 ## Spec
 
 ```markdown
-1. Let _jsonString_ be ? ToString(*value*).
-1. Parse StringToCodePoints(_jsonString_) as a JSON text as specified in ECMA-404.
-1. If it is not a valid JSON text as defined in that specification, return *false*.
-1. Return *true*.
+JSON.parse ( _text_ [ , _reviver_ ] )
+
+1. Let _result_ be Completion(Call(%JSON.parse%, *null*, << _text_, _reviver_ >> )).
+1. If _result_ is an abrupt completion, return *undefined*.
+1. Return _result_.
 ```

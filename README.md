@@ -3,7 +3,7 @@
 ## Problem to solve
 
 ```js
-try { return JSON.parse(str) } catch { return null }
+try { return JSON.parse(str) } catch { return undefined }
 ```
 
 ## Prior art

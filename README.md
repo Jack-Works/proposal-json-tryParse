@@ -1,5 +1,7 @@
 # JSON.tryParse
 
+Rejected by [tc39 on Nov 2023](https://github.com/tc39/notes/blob/main/meetings/2023-11/november-29.md#jsontryparse).
+
 ## Problem to solve
 
 ```js
